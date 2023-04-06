@@ -4,7 +4,7 @@
 	header("Access-Control-Allow-Methods: POST");
 	header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 	
-	$secretKey = "YOUR_SECRET_KEY";
+	$secretKey = "MybbLottery";
 	
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$input = json_decode(file_get_contents("php://input"), true);
