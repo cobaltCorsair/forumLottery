@@ -10,6 +10,7 @@
 		$input = json_decode(file_get_contents("php://input"), true);
 		
 		if (!isset($input["token"]) || $input["token"] != $secretKey) {
+			echo json_encode(["error" => $input["token"]]);
 			http_response_code(401);
 			echo json_encode(["error" => "Unauthorized"]);
 			exit();
